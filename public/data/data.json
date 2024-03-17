@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+     "title": "CSS",
+     "description": "CSS is used to style the HTML elements.",
+     "image": "/images/css.jpg",
+     "watch":"on YouTube",
+     "price": 0,
+     "type": "Free"
+},
+  {
+    "id": 2,
+     "title": "HTML",
+     "description": "HTML is the standard markup language for creating Web pages.",
+     "image": "/images/html.jpg",
+     "watch":"on YouTube",
+     "price": 0,
+     "type": "Free"
+  },
+  {
+    "id": 3,
+     "title": "JavaScript",
+     "description": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages.",
+     "image": "/images/js.jpg",
+     "watch":"on Platform",
+     "price": 49,
+     "type": "Paid"
+  },
+  {
+    "id": 4,
+     "title": "React",
+     "description": "React is a JavaScript library for building user interfaces.",
+     "image": "/images/react.jpg",
+     "watch":"on Platform",
+     "price": 49,
+     "type": "Paid"
+  },
+  {
+    "id": 5,
+     "title": "Git, GitHub",
+     "description": "Git is a version control system. GitHub is a web-based hosting service for Git.",
+     "image": "/images/git.jpg",
+     "watch":"on Platform",
+     "price": 29,
+     "type": "Paid"
+  },
+  {
+    "id": 6,
+     "title": "Next.js",
+     "description": "Next.js is a React framework.",
+     "image": "/images/next.jpg",
+     "watch":"on Platform",
+     "price": 49,
+     "type": "Paid"
+  },
+  {
+    "id": 7,
+     "title": "Node.js",
+     "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+     "image": "/images/nodejs.jpg",
+     "watch":"on Platform",
+     "price": 29,
+     "type": "Paid"
+  }
+]
