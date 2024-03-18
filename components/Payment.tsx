@@ -37,9 +37,9 @@ const Payment = ({allPayValue}:{allPayValue: number}) => {
       <ToastContainer />
       <form
         onSubmit={handleSubmit}
-        className='max-w-[600px] max-sm:w-full bg-secondary p-6 max-sm:p-4 rounded-lg shadow-lg'
+        className='max-w-[600px] w-full max-sm:w-full bg-secondary p-6 max-sm:p-4 rounded-lg shadow-lg'
       >
-        <div className='flex'></div>
+       
         <div className='w-100%'>
           <Label htmlFor='cardNumber'>To pay</Label>
           <Input

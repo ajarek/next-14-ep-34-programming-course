@@ -25,7 +25,7 @@ const Paid = ({ searchParams }: { searchParams: { id: string } }) => {
     return <div className='pl-[280px] py-24 text-3xl'>Course not found</div>
   }
   return (
-    <div className='pl-[280px] py-20'>
+    <div className='flex flex-col items-center pl-[280px] py-20'>
       <h1 className=' text-2xl font-bold mb-4'>Paid</h1>
       <div className='flex items-center gap-8 text-xl mb-4'>
         <div>
