@@ -2,7 +2,7 @@
   {
     "id": 1,
      "title": "CSS",
-     "description": "CSS is used to style the HTML elements.",
+     "description": "CSS is used to style the HTML elements.CSS (Cascading Style Sheets) is the code that styles web content. It defines how HTML elements should be displayed. In CSS, you can control colors, fonts, spacing, layout, and more. By applying CSS rules, you can create visually appealing and consistent designs for your web pages.",
      "image": "/images/css.jpg",
      "watch":"on YouTube",
      "price": 0,
@@ -11,7 +11,7 @@
   {
     "id": 2,
      "title": "HTML",
-     "description": "HTML is the standard markup language for creating Web pages.",
+     "description": "HTML is the standard markup language for creating Web pages.HTML (Hypertext Markup Language) is the standard markup language for creating web pages. With HTML, you can build your own website. It’s easy to learn and enjoyable! You can use HTML tags to structure content, create headings, paragraphs, links, and more.",
      "image": "/images/html.jpg",
      "watch":"on YouTube",
      "price": 0,
@@ -20,7 +20,7 @@
   {
     "id": 3,
      "title": "JavaScript",
-     "description": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages.",
+     "description": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages JavaScript, often abbreviated as JS, is a versatile programming language. It’s widely used for web development. JS allows you to create interactive and dynamic web pages. With its first-class functions, it’s not only for browsers but also for server-side environments like Node.js. Learning JS empowers you to manipulate HTML, handle events, and build responsive, feature-rich websites.",
      "image": "/images/js.jpg",
      "watch":"on Platform",
      "price": 49,
@@ -29,7 +29,7 @@
   {
     "id": 4,
      "title": "React",
-     "description": "React is a JavaScript library for building user interfaces.",
+     "description": "React is a JavaScript library for building user interfaces.React, a JavaScript library, empowers developers to create interactive user interfaces (UI). It embraces declarative components that manage state and logic. With React, you design simple views that handle application state, while React efficiently updates and re-renders relevant components. Its component-based approach simplifies code maintenance and debugging. React works in isolation, allowing you to build new features without rewriting existing code. It also renders on the server using Node.js and powers mobile apps via React Native. ",
      "image": "/images/react.jpg",
      "watch":"on Platform",
      "price": 49,
@@ -38,7 +38,7 @@
   {
     "id": 5,
      "title": "Git, GitHub",
-     "description": "Git is a version control system. GitHub is a web-based hosting service for Git.",
+     "description": "Git is a version control system. GitHub is a web-based hosting service for Git.Git is a version control system that tracks code changes. Developed by Linus Torvalds in 2005, Git allows distributed management of project versions. It’s open source and accessible from different computers. GitHub, on the other hand, is a platform where Git users collaborate. It hosts, shares, and manages code files. Millions of developers worldwide use Git and GitHub. Learning them is crucial for job seekers. Git handles code, while GitHub provides a web-based interface for hosting and collaboration.",
      "image": "/images/git.jpg",
      "watch":"on Platform",
      "price": 29,
@@ -47,7 +47,7 @@
   {
     "id": 6,
      "title": "Next.js",
-     "description": "Next.js is a React framework.",
+     "description": "Learn how to create a fully functional clone of Eraser.io using Next.js, React, TypeScript, and Tailwind CSS. Follow along as we build and deploy this collaborative drawing application, covering essential concepts in full-stack development in just a few simple steps. Dive into modern web development and unleash your creativity with this hands-on tutorial!",
      "image": "/images/next.jpg",
      "watch":"on Platform",
      "price": 49,
@@ -56,7 +56,7 @@
   {
     "id": 7,
      "title": "Node.js",
-     "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+     "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.Node.js, an open-source, cross-platform JavaScript runtime environment, enables server-side execution of JavaScript code. Built on Chrome’s V8 engine, it facilitates non-blocking, event-driven programming. Developers use Node.js for scalable, real-time applications. It powers web servers, APIs, and microservices. Node Package Manager (NPM) simplifies package management.",
      "image": "/images/nodejs.jpg",
      "watch":"on Platform",
      "price": 29,
