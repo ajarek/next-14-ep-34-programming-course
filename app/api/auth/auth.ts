@@ -9,7 +9,7 @@ export const {
   handlers: { GET, POST },
 } = NextAuth({
   pages: {
-    error: '/',
+    error: '/register',
   },
 
   providers: [
@@ -17,30 +17,30 @@ export const {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
-//     CredentialsProvider({
-//       name: 'Credential',
-//       credentials: {
-//         username: { type: 'text', required: true },
-//         password: { type: 'password', required: true },
-//       },
-//       async authorize(credentials: any) {
-//         await connectToDb()
-//         try {
-//           const user = await User.findOne({ username: credentials.username })
-//           if (user) {
-//             const isPasswordCorrect = await bcrypt.compare(
-//               credentials.password,
-//               user.password
-//             )
-//             if (isPasswordCorrect) {
-//               return user
-//             }
-//           }
-//         } catch (err: any) {
-//           throw new Error(err)
-//         }
-//       },
-//     }),
+    CredentialsProvider({
+      name: 'Credential',
+      credentials: {
+        username: { type: 'text', required: true },
+        password: { type: 'password', required: true },
+      },
+      async authorize(credentials: any) {
+        await connectToDb()
+        try {
+          const user = await User.findOne({ username: credentials.username })
+          if (user) {
+            const isPasswordCorrect = await bcrypt.compare(
+              credentials.password,
+              user.password
+            )
+            if (isPasswordCorrect) {
+              return user
+            }
+          }
+        } catch (err: any) {
+          throw new Error(err)
+        }
+      },
+    }),
    ],
    secret: process.env.AUTH_SECRET,
  })
