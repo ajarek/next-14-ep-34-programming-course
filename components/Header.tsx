@@ -3,11 +3,16 @@ import { ModeToggle } from '@/components/ModeToggle'
 import SearchCourse from '@/components/SearchCourse'
 import Image from 'next/image'
 import Link from 'next/link'
-const Header = () => {
+import { auth } from '@/app/api/auth/auth'
+import Logout from './Logout'
+
+const Header = async () => {
+  const session = await auth()
   return (
     <>
       <div className=' min-w-[calc(100vw-272px)] h-[73px] absolute top-0 left-[256px] bg-secondary flex justify-between items-center gap-4 px-4'>
-        <SearchCourse />
+        <SearchCourse defaultValue={null} />
+        <Logout session={session} />
         <ModeToggle />
       </div>
       <>
@@ -25,7 +30,9 @@ const Header = () => {
             Online <br /> Programming <br /> Courses
           </h1>
         </Link>
+       
       </>
+      
     </>
   )
 }
