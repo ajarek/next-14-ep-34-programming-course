@@ -18,7 +18,7 @@ const Paid = async ({ searchParams }: { searchParams: { id: string } }) => {
   const searchId = searchParams.id
   const session = await auth()
   if (!session) {
-    redirect('/api/auth/signin')
+    redirect('/register')
   }
   
   const course: Course | undefined = data.find(

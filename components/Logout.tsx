@@ -13,7 +13,7 @@ const Logout = async ({ session }: any) => {
       ) : (
         <Link
           className='px-4 py-1 bg-primary text-primary-foreground rounded-sm'
-          href={'/api/auth/signin'}
+          href={'/register'}
         >
           Login
         </Link>

@@ -5,6 +5,8 @@ import { User } from '@/lib/models'
 import { addUser } from '@/lib/action'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { Input } from './ui/input'
+import { Button } from './ui/button'
 
 const DEFAULT_IS_ADMIN: boolean = false
 
@@ -36,51 +38,52 @@ const RegisterForm = () => {
   }
 
   return (
-    <div className='min-h-full flex flex-col justify-start items-center'>
+    <div className='min-h-full pl-[280px] flex flex-col justify-start items-center'>
+      <h1 className='text-3xl font-bold mb-4'>Register</h1>
       <form
-        className='w-80  flex flex-col gap-4 p-4 shadow-lg'
+        className='w-80  flex flex-col gap-4 p-6 shadow-xl border-2 rounded-sm'
         onSubmit={handleSubmit}
       >
-        <input
+        <Input
           type='text'
           placeholder='username'
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className='input input-bordered w-full max-w-xs'
+         
         />
-        <input
+        <Input
           type='email'
           placeholder='email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className='input input-bordered w-full max-w-xs'
+         
         />
-        <input
+        <Input
           type='password'
           placeholder='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className='input input-bordered w-full max-w-xs'
+         
         />
-        <input
+        <Input
           type='text'
           placeholder='image'
           value={img}
           onChange={(e) => setImage(e.target.value)}
-          className='input input-bordered w-full max-w-xs'
+         
         />
-        <input
+        <Input
           type='hidden'
           name='isAdmin'
           value={`${DEFAULT_IS_ADMIN}`}
-          className='input input-bordered w-full max-w-xs'
+         
         />
-        <button
-          className='btn btn-primary'
+        <Button
+          className=''
           type='submit'
         >
           Register
-        </button>
+        </Button>
         <Link href='/api/auth/signin'>
           Have an account? <b>Login</b>
         </Link>
