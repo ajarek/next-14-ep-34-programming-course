@@ -6,8 +6,8 @@ import { useRouter } from 'next/navigation'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { Label } from "./ui/label"
-
-const Payment = ({allPayValue}:{allPayValue: number}) => {
+import { addCourse} from '@/lib/action'
+const Payment = ({allPayValue,title, price, userId, image}:{allPayValue: number,title: string, price: number, userId: string, image: string}) => {
   const router = useRouter()
   
   const notifySuccess = () => {
@@ -22,11 +22,17 @@ const Payment = ({allPayValue}:{allPayValue: number}) => {
       theme: 'colored',
     })
   }
-  const handleSubmit = (e: any) => {
+  const handleSubmit =async (e: any) => {
     e.preventDefault()
-
-    notifySuccess()
+   const formData={
     
+    title,
+    price,
+    userId,
+    image
+   }
+    await addCourse(formData)
+    notifySuccess()
     setTimeout(() => {
       router.push('/')
     }, 3000)
@@ -45,8 +51,7 @@ const Payment = ({allPayValue}:{allPayValue: number}) => {
           <Input
             type='text'
             value={allPayValue}
-            required
-            
+            readOnly
           />
         </div>
 

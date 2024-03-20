@@ -15,10 +15,10 @@ const Header = async () => {
         <Logout session={session} />
         <ModeToggle />
       </div>
-      <>
+      <div className='min-h-screen flex flex-col w-[256px]   gap-6 absolute top-0 left-0  p-4 border-r-2  bg-secondary'>
         <Link
           href='/'
-          className='w-[256px] min-h-screen flex items-start gap-2 absolute top-0 left-0  p-4 border-r-2 bg-secondary'
+          className='flex items-center gap-2'
         >
           <Image
             src='/images/Logo.png'
@@ -27,11 +27,11 @@ const Header = async () => {
             height={70}
           />
           <h1 className='font-bold'>
-            Online <br /> Programming <br /> Courses
+            Online <br /> Programming <br /> Courses lol
           </h1>
         </Link>
-       
-      </>
+        <Link href='/my-courses' className='font-bold px-4'>My Courses</Link>
+      </div>
       
     </>
   )

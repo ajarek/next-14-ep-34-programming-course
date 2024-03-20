@@ -7,8 +7,12 @@ export type User = {
   img: string
   isAdmin: boolean
 }
-
-
+export type Course = {
+  title: string
+  price: number
+  userId: string
+  image: string
+}
 
 const userSchema = new mongoose.Schema(
   {
@@ -20,5 +24,13 @@ const userSchema = new mongoose.Schema(
   },
   { timestamps: true }
 )
+const courseSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  price: { type: Number, required: true },
+  userId: { type: String, required: true },
+  image: { type: String },
+})
 
 export const User = mongoose.models?.User || mongoose.model('User', userSchema)
+export const Course =
+  mongoose.models?.Course || mongoose.model('Course', courseSchema)
