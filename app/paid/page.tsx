@@ -20,7 +20,7 @@ const Paid = async ({ searchParams }: { searchParams: { id: string } }) => {
   if (!session) {
     redirect('/register')
   }
-  console.log(session.user?.email);
+  
   
   const course: Course | undefined = data.find(
     (item) => item.id === Number(searchId)

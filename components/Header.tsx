@@ -27,7 +27,7 @@ const Header = async () => {
             height={70}
           />
           <h1 className='font-bold'>
-            Online <br /> Programming <br /> Courses lol
+            Online <br /> Programming <br /> Courses 
           </h1>
         </Link>
         <Link href='/my-courses' className='font-bold px-4'>My Courses</Link>
