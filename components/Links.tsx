@@ -13,7 +13,7 @@ const Links = () => {
       >
         {menu?<X size={24} color='red' />:<Menu size={24} />}
       </div>
-      <div className='min-h-screen flex flex-col w-[256px]   gap-6 absolute top-0 left-0 max-lg:left-[-256px]  py-4 px-8 border-r-2  bg-secondary transition-all' style={menu?{left:'0px',zIndex:'1'}:{left:'-256px'}}>
+      <div className={menu?'left-0 min-h-screen flex flex-col w-[256px]   gap-6 absolute top-0    py-4 px-8 border-r-2  bg-secondary transition-all':'max-lg:left-[-256px] min-h-screen flex flex-col w-[256px]   gap-6 absolute top-0    py-4 px-8 border-r-2  bg-secondary transition-all'} >
         <Link
           href='/'
           className='flex items-center gap-2'
