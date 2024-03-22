@@ -37,7 +37,7 @@ export const addCourse = async (formData : Course) => {
     
     await newCourse.save()
     console.log('saved' + newCourse)
-    // revalidatePath('/')
+     revalidatePath('/')
   } catch (err) {
     console.log(err)
   }
@@ -46,4 +46,17 @@ export const getCourseUser = async (userId: string) => {
   await connectToDb()
   const courses = await Course.find({ userId })
   return courses
+}
+export const deleteCourse = async (formData: { id: string }) => {
+  const { id } = formData
+  try {
+    connectToDb()
+
+    await Course.findByIdAndDelete(id)
+    console.log('deleted from db' + id)
+    revalidatePath('/my-courses')
+  } catch (err) {
+    console.log(err)
+    return { err: 'Something went wrong' }
+  }
 }

@@ -35,7 +35,7 @@ const Payment = ({allPayValue,title, price, userId, image}:{allPayValue: number,
     notifySuccess()
     setTimeout(() => {
       router.push('/')
-    }, 3000)
+    }, 2000)
   }
   
   return (

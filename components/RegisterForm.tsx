@@ -38,7 +38,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <div className='min-h-full pl-[280px] flex flex-col justify-start items-center'>
+    <div className='min-h-full pl-[280px] max-lg:pl-0 flex flex-col justify-start items-center'>
       <h1 className='text-3xl font-bold mb-4'>Register</h1>
       <form
         className='w-80  flex flex-col gap-4 p-6 shadow-xl border-2 rounded-sm'
