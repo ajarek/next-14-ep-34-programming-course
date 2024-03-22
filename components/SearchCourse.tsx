@@ -33,7 +33,7 @@ const SearchCourse = ({ defaultValue }: iDefault) => {
         onKeyDown={handleKeyPress}
       />
       <Search
-        className='absolute left-5  '
+        className='absolute left-8'
         color='gray'
       />
     </>
