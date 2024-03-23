@@ -29,10 +29,22 @@ const Links = () => {
           </h1>
         </Link>
         <Link
+          href='/'
+          className='font-bold px-4'
+        >
+          All Courses
+        </Link>
+        <Link
           href='/my-courses'
           className='font-bold px-4'
         >
           My Courses
+        </Link>
+        <Link
+          href='/courses-pro'
+          className='font-bold px-4'
+        >
+          Courses Pro
         </Link>
       </div>
     </>
