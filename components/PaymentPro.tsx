@@ -4,10 +4,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import { useRouter } from 'next/navigation'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Label } from "@/components/ui/label"
+import { Label } from '@/components/ui/label'
 
-
-const PaymentPro = ({id}: {id: string}) => {
+const PaymentPro = ({ id }: { id: string }) => {
   const router = useRouter()
   const notifySuccess = () => {
     toast.success(`Thank  you for your payment ${id} $!`, {
@@ -21,10 +20,9 @@ const PaymentPro = ({id}: {id: string}) => {
       theme: 'colored',
     })
   }
-  const handleSubmit =async (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault()
-   
-   
+
     notifySuccess()
     setTimeout(() => {
       router.push('/')
@@ -32,12 +30,11 @@ const PaymentPro = ({id}: {id: string}) => {
   }
   return (
     <>
-       <ToastContainer />
+      <ToastContainer />
       <form
         onSubmit={handleSubmit}
         className='max-w-[600px] w-full max-sm:w-full bg-secondary p-6 max-sm:p-4 rounded-lg shadow-lg'
       >
-       
         <div className='w-100%'>
           <Label htmlFor='cardNumber'>To pay</Label>
           <Input
@@ -54,7 +51,6 @@ const PaymentPro = ({id}: {id: string}) => {
             placeholder='1234 5678 9012 3456'
             required
             pattern='^(?:\d{4} ){3}\d{4}$'
-            
           />
         </div>
         <div className='w-100% '>
@@ -64,7 +60,6 @@ const PaymentPro = ({id}: {id: string}) => {
             placeholder='MM/YYYY'
             required
             pattern='^(0[1-9]|1[0-2])\/20[2-9][4-9]$'
-            
           />
         </div>
 
@@ -75,12 +70,16 @@ const PaymentPro = ({id}: {id: string}) => {
             placeholder='123'
             required
             pattern='^[0-9]{3}$'
-            
           />
         </div>
 
         <div className='w-100%  mt-4'>
-          <Button className='w-full' type='submit'>I pay by card</Button>
+          <Button
+            className='w-full'
+            type='submit'
+          >
+            I pay by card
+          </Button>
         </div>
       </form>
     </>

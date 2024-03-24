@@ -24,8 +24,8 @@ export const addUser = async (formData: User) => {
     console.log(err)
   }
 }
-export const addCourse = async (formData : Course) => {
- const {title,  price,  userId,  image} = formData
+export const addCourse = async (formData: Course) => {
+  const { title, price, userId, image } = formData
   try {
     connectToDb()
     const newCourse = new Course({
@@ -34,10 +34,10 @@ export const addCourse = async (formData : Course) => {
       userId,
       image,
     })
-    
+
     await newCourse.save()
     console.log('saved' + newCourse)
-     revalidatePath('/')
+    revalidatePath('/')
   } catch (err) {
     console.log(err)
   }

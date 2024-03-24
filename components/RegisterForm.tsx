@@ -49,34 +49,29 @@ const RegisterForm = () => {
           placeholder='username'
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-         
         />
         <Input
           type='email'
           placeholder='email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-         
         />
         <Input
           type='password'
           placeholder='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-         
         />
         <Input
           type='text'
           placeholder='image'
           value={img}
           onChange={(e) => setImage(e.target.value)}
-         
         />
         <Input
           type='hidden'
           name='isAdmin'
           value={`${DEFAULT_IS_ADMIN}`}
-         
         />
         <Button
           className=''

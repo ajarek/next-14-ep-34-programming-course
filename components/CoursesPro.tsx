@@ -1,5 +1,5 @@
 'use client'
- 
+
 import { useRouter } from 'next/navigation'
 
 import {
@@ -29,7 +29,7 @@ const CoursesPro = ({
   text2,
   text3,
   text4,
-  proPrice
+  proPrice,
 }: PropsCoursesPro) => {
   const router = useRouter()
   return (
@@ -57,7 +57,12 @@ const CoursesPro = ({
         </p>
       </CardContent>
       <CardFooter>
-        <Button className='w-full' onClick={() => router.push(`/paid-pro/${proPrice}`)}>Get Started</Button>
+        <Button
+          className='w-full'
+          onClick={() => router.push(`/paid-pro/${proPrice}`)}
+        >
+          Get Started
+        </Button>
       </CardFooter>
     </Card>
   )

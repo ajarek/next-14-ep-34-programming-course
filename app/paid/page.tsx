@@ -20,16 +20,18 @@ const Paid = async ({ searchParams }: { searchParams: { id: string } }) => {
   if (!session) {
     redirect('/register')
   }
-  
-  
+
   const course: Course | undefined = data.find(
     (item) => item.id === Number(searchId)
   )
   if (!course) {
-    return <div className='pl-[280px] py-24 text-3xl max-lg:pl-0'>Course not found</div>
+    return (
+      <div className='pl-[280px] py-24 text-3xl max-lg:pl-0'>
+        Course not found
+      </div>
+    )
   }
   return (
-    
     <div className='flex flex-col items-center pl-[280px] max-lg:pl-2 max-lg:pr-2 py-20'>
       <h1 className=' text-2xl font-bold mb-4'>Paid</h1>
       <div className='flex items-center gap-8 text-xl mb-4'>
@@ -51,7 +53,19 @@ const Paid = async ({ searchParams }: { searchParams: { id: string } }) => {
           <DollarSign size={16} />
         </div>
       </div>
-      {course.type === 'Paid'  ? <Payment allPayValue={course.price} title={course.title} price={course.price} userId={(session.user?.email) ?? 'default_value'} image={course.image} />:<div  className=' w-fit   px-6  py-2 text-center text-xl border-2 border-green-400 mt-10 rounded-sm'>The course is free 🏆 </div>}
+      {course.type === 'Paid' ? (
+        <Payment
+          allPayValue={course.price}
+          title={course.title}
+          price={course.price}
+          userId={session.user?.email ?? 'default_value'}
+          image={course.image}
+        />
+      ) : (
+        <div className=' w-fit   px-6  py-2 text-center text-xl border-2 border-green-400 mt-10 rounded-sm'>
+          The course is free 🏆{' '}
+        </div>
+      )}
     </div>
   )
 }

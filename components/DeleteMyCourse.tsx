@@ -3,7 +3,7 @@
 import { deleteCourse } from '@/lib/action'
 import { Button } from './ui/button'
 
-const DeleteMyCourse= ({ idCourse }: { idCourse: string }) => {
+const DeleteMyCourse = ({ idCourse }: { idCourse: string }) => {
   const handleSubmit = async (event: any) => {
     event.preventDefault()
 
@@ -28,7 +28,6 @@ const DeleteMyCourse= ({ idCourse }: { idCourse: string }) => {
         className=' border-2 border-red-500 h-10 w-10 rounded-full '
         type='submit'
         size='sm'
-        
       >
         ❌
       </Button>

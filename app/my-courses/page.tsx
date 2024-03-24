@@ -1,9 +1,9 @@
 import { getCourseUser } from '@/lib/action'
-import  DeleteMyCourse  from '@/components/DeleteMyCourse'
+import DeleteMyCourse from '@/components/DeleteMyCourse'
 import { auth } from '@/app/api/auth/auth'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
-import { Play } from 'lucide-react';
+import { Play } from 'lucide-react'
 const myCourse = async () => {
   const session = await auth()
   if (!session) {
@@ -28,8 +28,14 @@ const myCourse = async () => {
               />
             </div>
             <div>{course.title}</div>
-            <div className='w-10 h-10 flex items-center justify-center border-2 border-blue-700 rounded-full'><Play size={24} color='blue' fill='blue' /></div>
-            <DeleteMyCourse idCourse={(course._id).toString()} />
+            <div className='w-10 h-10 flex items-center justify-center border-2 border-blue-700 rounded-full'>
+              <Play
+                size={24}
+                color='blue'
+                fill='blue'
+              />
+            </div>
+            <DeleteMyCourse idCourse={course._id.toString()} />
           </div>
         ))
       ) : (
